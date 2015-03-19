@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = 'example.dev'
 
   config.vm.box = "digital_ocean"
-  config.vm.synced_folder "..", "/example.dev"
+  #config.vm.synced_folder "..", "/example.dev"
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "site.yml"
     ansible.limit = 'all'
