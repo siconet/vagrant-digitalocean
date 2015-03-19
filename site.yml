@@ -1,0 +1,10 @@
+- hosts: all
+  user: root
+  sudo: yes
+  tasks:
+    - name: install nodejs
+      apt: name=nodejs
+    - name: install mongodb
+      apt: name=mongodb
+    - name: install nginx
+      apt: name=nginx
