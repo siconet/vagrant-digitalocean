@@ -5,10 +5,10 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # sets the hostname
-  config.vm.hostname = 'example.dev'
+  config.vm.hostname = '{{APP_NAME}}'
 
   config.vm.box = "digital_ocean"
-  #config.vm.synced_folder "..", "/example.dev"
+  #config.vm.synced_folder "..", "/{{APP_NAME}}"
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "site.yml"
     ansible.limit = 'all'
